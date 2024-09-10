@@ -10,16 +10,16 @@
                 <span>{data.person.prefix} {data.person.surname}</span>
             </h1>
 
-            <p>{data.person.bio}</p>
+            <p class="bio">{data.person.bio}</p>
 
             <div><span>Student</span> <span>FDND</span></div>
             
-            <ul>
+            <ul class="info">
                 <li>21 jaar</li> <!-- Moet custom data worden-->
                 <li>Landsmeer</li> <!-- Moet custom data worden-->
             </ul>
 
-            <ul>
+            <ul class="links">
                 <li>
                     <a href="#"> <!-- Moet custom data worden-->
                         <svg width=45 height=45 viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" fill="#000">
@@ -32,7 +32,7 @@
                 </li>
                 <li>
                     <a href="https://www.instagram.com/xartisticanne?igsh=ZHAweG96MDVjZXc=">
-                        <svg width="64" height="64" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" stroke="#000">
+                        <svg width="45" height="45" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" stroke="#000">
                             <path d="M723 428 536 303v112l103 69zm-211 28-84 57 84 56 85-57zm24 154v112l187-125-83-56zm-152-69-83 56 187 125V610l-104-69zm496-429H144c-18 
                             0-32 14-32 32v736c0 18 14 32 32 32h736c18 0 32-14 32-32V144c0-18-14-32-32-32zm-90 485v4a14 14 0 0 1-1 3l-1 2v1l-1 2-1 1-1 1-1 1-1 2-1 1-1 1-1 1h-1L525 
                             786c-4 3-8 4-13 4s-9-1-13-4L245 617h-1l-1-1-1-1-1-1-1-1a7 7 0 0 1-1-1l-1-2-1-1-1-2v-1l-1-2v-1l-1-2V424a14 14 0 0 1 1-3l1-2v-1a12 12 0 0 1 2-3l2-3 1-1 1-1 1-1 1-1h1l254-169c8-5 
@@ -42,7 +42,7 @@
                 </li>
                 <li>
                     <a href={data.person.website}>
-                        <svg height="64" width="64" xmlns="http://www.w3.org/2000/svg" viewBox="-143 145 512 512" xml:space="preserve">
+                        <svg height="45" width="45" xmlns="http://www.w3.org/2000/svg" viewBox="-143 145 512 512" xml:space="preserve">
                             <path d="M-143 145v512h512V145h-512zm482 482h-452V175h452v452z"/>
                             <path d="M54 509c19 4 39 4 57 5 20-1 39-1 57-4 32-5 56-22 68-53 4-11 7-22 8-34 3-25-1-48-18-68l-2-4c1-20-1-39-8-58-1-3-2-4-5-3l-16 
                             5c-16 5-30 13-43 22-1 1-4 2-5 1-22-4-45-3-67 0l-7-1c-15-10-31-20-50-25-15-4-12-5-16 9-5 16-7 33-6 50l-1 4c-7 8-12 17-15 26-6 19-5 39-1 
@@ -53,12 +53,106 @@
                 </li>
             </ul>
 
-            <img height=300 src="images/foto-self.PNG" alt="selfie">
+            <img class="selfie" height=300 src="images/foto-self.PNG" alt="selfie">
 
             <p>&copy; 14 february 2024</p>
 
-            <img src="images/orbit.svg" alt="">
+            <img class="orbit-icon" src="images/orbit.svg" alt="">
 
         </article>
     </main>
 </body>
+
+<style>
+
+article {
+    display: grid;
+    grid-template-columns: repeat(3, auto) ;
+    grid-template-rows: repeat(6, auto) ;
+    background-color: var(--background-card);
+    height: auto;
+    max-width: 18rem;
+    grid-gap: 1rem;
+    padding: 1rem;
+}
+
+h1 {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/3;
+    grid-row:1; 
+    font-size: 2.5rem;
+}
+
+h1 span {
+    display: flex;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    grid-column: 2/4;
+    grid-row: 1;
+    justify-self: end;
+    align-self: start;
+}
+
+.links svg {
+    height: 40px;
+    width: 40px;
+}
+
+.bio {
+    grid-column: 2/4;
+    grid-row: 2;
+    max-width: 11rem;
+}
+
+.info {
+    grid-column: 1;
+    grid-row: 5;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    grid-column: 1/4;
+    grid-row: 3/5;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.orbit-icon {
+    grid-column: 1;
+    grid-row: 2;
+    transform: rotate(90deg);
+    align-self: center;
+    justify-self: center;
+    scale: 2;
+}
+
+.selfie {
+    grid-column: 2/4;
+    grid-row: 3/7;
+    justify-self: center;
+}
+
+p:last-of-type {
+    grid-column: 2/4;
+    grid-row: 6;
+    justify-self: end;
+    align-self: end;
+}
+
+@media (width > 25rem) {
+    article {
+    max-width: 22rem;
+}
+
+p:first-of-type {
+    max-width: 14rem;
+}
+
+}
+
+</style>
