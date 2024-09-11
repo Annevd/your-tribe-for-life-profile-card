@@ -15,8 +15,8 @@
             <div><span>Student</span> <span>FDND</span></div>
             
             <ul class="info">
-                <li>21 jaar</li> <!-- Moet custom data worden-->
-                <li>Landsmeer</li> <!-- Moet custom data worden-->
+                <li>{data.person.custom.leeftijd} jaar</li>
+                <li>{data.person.custom.woonplaats}</li>
             </ul>
 
             <ul class="links">
@@ -31,7 +31,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#"> <!-- Moet custom data worden-->
+                    <a href={data.person.custom.codepen}> <!-- Moet custom data worden-->
                         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512" xml:space="preserve">
                             <g id="SVGRepo_iconCarrier">
                               <path d="M256 1a255 255 0 1 0 0 510 255 255 0 0 0 0-510zm0 469a214 214 0 1 1 0-428 214 214 0 0 1 0 428zm158-264v-2h-1a14 
