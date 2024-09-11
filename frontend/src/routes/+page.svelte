@@ -57,7 +57,7 @@
 
             <img class="selfie" height=300 src="images/foto-self-1.PNG" alt="selfie">
 
-            <p>&copy; 14 february 2024</p>
+            <p>&copy; 14 february 2003</p>
 
             <img class="orbit-icon" src="images/orbit.svg" alt="">
 
