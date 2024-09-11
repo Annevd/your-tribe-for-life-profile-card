@@ -21,7 +21,7 @@
 
             <ul class="links">
                 <li>
-                    <a href="#"> <!-- Moet custom data worden-->
+                    <a href="https://www.instagram.com/xartisticanne?igsh=ZHAweG96MDVjZXc=">
                         <svg width=45 height=45 viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" fill="#000">
                             <g id="SVGRepo_iconCarrier"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round}</style></defs>
                                 <path class="cls-1" d="M35.38 10.46a2.19 2.19 0 1 0 2.16 2.22v-.06a2.18 2.18 0 0 0-2.16-2.16Z"/>
@@ -31,12 +31,14 @@
                     </a>
                 </li>
                 <li>
-                    <a href="https://www.instagram.com/xartisticanne?igsh=ZHAweG96MDVjZXc=">
-                        <svg width="45" height="45" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="icon" stroke="#000">
-                            <path d="M723 428 536 303v112l103 69zm-211 28-84 57 84 56 85-57zm24 154v112l187-125-83-56zm-152-69-83 56 187 125V610l-104-69zm496-429H144c-18 
-                            0-32 14-32 32v736c0 18 14 32 32 32h736c18 0 32-14 32-32V144c0-18-14-32-32-32zm-90 485v4a14 14 0 0 1-1 3l-1 2v1l-1 2-1 1-1 1-1 1-1 2-1 1-1 1-1 1h-1L525 
-                            786c-4 3-8 4-13 4s-9-1-13-4L245 617h-1l-1-1-1-1-1-1-1-1a7 7 0 0 1-1-1l-1-2-1-1-1-2v-1l-1-2v-1l-1-2V424a14 14 0 0 1 1-3l1-2v-1a12 12 0 0 1 2-3l2-3 1-1 1-1 1-1 1-1h1l254-169c8-5 
-                            18-5 26 0l254 169h1l1 1 1 1 1 1 1 2 2 2 1 1 1 2v1l1 2v1l1 2v173zm-48-45v-79l-60 39zm-460-79v79l60-40zm206-58V303L301 428l83 56z"/>
+                    <a href="#"> <!-- Moet custom data worden-->
+                        <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512" xml:space="preserve">
+                            <g id="SVGRepo_iconCarrier">
+                              <path d="M256 1a255 255 0 1 0 0 510 255 255 0 0 0 0-510zm0 469a214 214 0 1 1 0-428 214 214 0 0 1 0 428zm158-264v-2h-1a14 
+                              14 0 0 0-1-3 12 12 0 0 0-2-3l-1-1h-1l-144-97c-5-3-11-3-16 0l-144 97h-1l-1 1a12 12 0 0 0-2 3 13 13 0 0 0-1 2v1h-1v104h1v2a16 
+                              16 0 0 0 2 3l1 1a12 12 0 0 0 2 1l144 97a14 14 0 0 0 16 0l144-97h1l1-1 1-1v-1l1-1 1-1v-2h1V206zm-144-69 106 71-48 32-58-40v-63zm-28 0v63l-58 40-48-32 
+                              106-71zm-117 96 34 23-34 23v-46zm117 142-106-71 48-32 58 40v63zm14-87-48-32 48-32 48 32-48 32zm14 87v-63l58-40 48 32-106 71zm117-96-34-23 34-23v46z" id="c2be471c56fc5b4dd571614bb30525c6"/>
+                            </g>
                         </svg>
                     </a>
                 </li>
@@ -53,7 +55,7 @@
                 </li>
             </ul>
 
-            <img class="selfie" height=300 src="images/foto-self.PNG" alt="selfie">
+            <img class="selfie" height=300 src="images/foto-self-1.PNG" alt="selfie">
 
             <p>&copy; 14 february 2024</p>
 
@@ -73,15 +75,17 @@ article {
     height: auto;
     max-width: 18rem;
     grid-gap: 1rem;
-    padding: 1rem;
+    padding: 1rem 1rem 0 1rem;
+    /* overflow: hidden; */
 }
 
 h1 {
     display: flex;
     flex-direction: column;
-    grid-column: 1/3;
+    grid-column: 1/4;
     grid-row:1; 
-    font-size: 2.5rem;
+    font-size: 2.75rem;
+    font-family: 'Apestron', sans-serif;
 }
 
 h1 span {
@@ -90,6 +94,7 @@ h1 span {
 
 .links {
     display: flex;
+    gap: 0.25rem;
     align-items: center;
     grid-column: 2/4;
     grid-row: 1;
@@ -98,28 +103,66 @@ h1 span {
 }
 
 .links svg {
-    height: 40px;
-    width: 40px;
+    height: 35px;
+    width: 35px;
+}
+
+.links li:first-of-type svg .cls-1 {
+    stroke: var(--accent-color-2);
+}
+
+.links li:nth-of-type(2) svg {
+    fill: var(--accent-color-3);
+}
+
+.links li:last-of-type svg {
+    fill: var(--accent-color-1);
 }
 
 .bio {
     grid-column: 2/4;
     grid-row: 2;
-    max-width: 11rem;
+    max-width: 12rem;
 }
 
 .info {
-    grid-column: 1;
+    grid-column: 1/3;
     grid-row: 5;
+    /* justify-self: center; */
 }
 
-div {
+.info li {
+    list-style: circle;
+    list-style-position: inside;
+}
+
+div:first-of-type {
     display: flex;
     flex-direction: column;
     grid-column: 1/4;
     grid-row: 3/5;
-    font-size: 5rem;
+    align-self: center;
+    font-size: 2rem;
     text-align: center;
+    font-family: 'Sofachrome', sans-serif;
+    transform: scaleY(1.5);
+    line-height: 1;
+}
+
+div:first-of-type span:last-of-type {
+    font-size: 3.25rem;
+    transform: scaleY(1.25);
+}
+
+@supports (-webkit-text-stroke: 1px black) {
+  div:first-of-type {
+    -webkit-text-stroke: 0.5px var(--accent-color-1);
+    -webkit-text-fill-color: transparent;
+  }
+
+  div:first-of-type span:last-of-type {
+    -webkit-text-stroke: 0.5px var(--accent-color-2);
+  }
 }
 
 .orbit-icon {
@@ -135,6 +178,7 @@ div {
     grid-column: 2/4;
     grid-row: 3/7;
     justify-self: center;
+    z-index: 100;
 }
 
 p:last-of-type {
@@ -142,6 +186,9 @@ p:last-of-type {
     grid-row: 6;
     justify-self: end;
     align-self: end;
+    font-size: 0.5rem;
+    margin-bottom: 0.5rem;
+    z-index:101;
 }
 
 @media (width > 25rem) {
@@ -149,8 +196,20 @@ p:last-of-type {
     max-width: 22rem;
 }
 
+h1 {
+    font-size: 3.25rem;
+}
+
 p:first-of-type {
-    max-width: 14rem;
+    max-width: 16rem;
+}
+
+div:first-of-type {
+    font-size: 2.5rem;
+}
+
+div:first-of-type span:last-of-type {
+    font-size: 4rem;
 }
 
 }

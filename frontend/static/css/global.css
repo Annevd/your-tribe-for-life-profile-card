@@ -1,5 +1,30 @@
+@font-face {
+    font-family: 'Apestron';
+    src: url('/fonts/Apestron.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Sofachrome';
+    src: url('/fonts/sofachrome.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'nextstep';
+    src: url('/fonts/NEXTSTEP.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 :root {
     --background-card: #F4EFEA;
+    --accent-color-1: #D8A06C;
+    --accent-color-2: #73AFDB;
+    --accent-color-3: #B478A1;
+    --text-color: #4D382C;
 }
 
 * {
@@ -21,4 +46,19 @@ li {
 
 a {
     display: inline-block;
+}
+
+h1,
+p,
+a,
+li {
+    color: var(--text-color);
+}
+
+p,
+a,
+li {
+    font-family: 'nextstep', 'sans-serif';
+    font-weight: bold;
+    font-size: 0.85rem;
 }
