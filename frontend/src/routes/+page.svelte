@@ -61,6 +61,20 @@
 
             <img class="orbit-icon" src="images/orbit.svg" alt="">
 
+            <div class="orbit">
+                <svg class="sparkle left" width="44" height="86" viewBox="0 0 177 347" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M89 0c0 141 19 179 86 179-73 1-86 46-86 166-1-135-23-165-89-166 79 1 88-54 89-179Z" fill="#000"/>
+                    <path d="M89 0c0 142 19 180 88 179-75 0-89 46-88 168 0-137-23-167-89-168 79 1 88-54 89-179Z"/>
+                </svg>
+            </div>
+
+            <div class="orbit">
+                <svg class="sparkle right" width="44" height="86" viewBox="0 0 177 347" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M89 0c0 141 19 179 86 179-73 1-86 46-86 166-1-135-23-165-89-166 79 1 88-54 89-179Z" fill="#000"/>
+                    <path d="M89 0c0 142 19 180 88 179-75 0-89 46-88 168 0-137-23-167-89-168 79 1 88-54 89-179Z"/>
+                </svg>
+            </div>
+
         </article>
     </main>
 </body>
@@ -68,6 +82,7 @@
 <style>
 
 article {
+    position: relative;
     display: grid;
     grid-template-columns: repeat(3, auto) ;
     grid-template-rows: repeat(6, auto) ;
@@ -191,9 +206,44 @@ p:last-of-type {
     z-index:101;
 }
 
+.sparkle {
+    position: absolute;
+    fill: var(--text-color);
+    stroke: var(--text-color);
+}
+
+.sparkle.left {
+    height: 6rem;
+    bottom: 1%;
+    left: -1.25rem;
+}
+
+.sparkle.right {
+    height: 5rem;
+    top: 20%;
+    right: -0.75rem;
+}
+
 @media (width > 25rem) {
     article {
     max-width: 22rem;
+
+    
+    --width-card: 22rem;
+    --orbit-whitespace:calc(var(--width-card) * .1);
+	--orbit-diameter:calc( var(--width-card) + var(--orbit-whitespace) * 2 );
+	--orbit-radius:calc( var(--width-card) * .5 + var(--orbit-whitespace) );
+	--orbit-offset-y:calc(var(--width-card) * .5);
+	--orbit-tilt-y:-20deg;
+	--orbit-tilt-x:80deg;
+	
+	--width-star:calc(var(--width-card) * .25);
+    width:var(--width-card);
+	/* aspect-ratio:3/5; */
+	
+    --width-star:calc(var(--width-card) * .25);
+	
+	transform-style:preserve-3d;
 }
 
 h1 {
@@ -210,6 +260,99 @@ div:first-of-type {
 
 div:first-of-type span:last-of-type {
     font-size: 4rem;
+}
+
+/* .sparkle.left {
+    height: 8rem;
+    width: 4rem;
+    bottom: 0%;
+    left: -2.25rem;
+}
+
+.sparkle.right {
+    height: 6rem;
+    width: 3rem;
+    top: 15%;
+    right: -1.5rem;
+} */
+
+
+.orbit {
+	position:absolute;
+    left: -2.25rem;
+	width:var(--orbit-diameter);
+	aspect-ratio:1/1;
+	border:solid .2em var(--text-color);
+	border-radius:50%;
+    margin: 0;
+	
+	display:grid;
+	place-items:center;
+	
+	transform-style:preserve-3d;
+	transform:
+		translateY( var(--ty, 0) )
+    /* als je perspectief wilt voor de orbits	- optie 1	*/
+/* 		perspective(160vw) */
+		rotateX( var(--orbit-tilt-x) )
+		rotateY( var(--orbit-tilt-y) )
+		;
+}
+
+.orbit:nth-of-type(1) {
+	--ty:calc(var(--orbit-offset-y) * -1);
+}
+
+.orbit:nth-of-type(2) {
+	--ty:calc(var(--orbit-offset-y) * 1);
+}
+
+.sparkle {
+    position: relative;
+    width:var(--width-star);
+
+    animation: star linear var(--orbit-time) infinite;
+	
+	clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
+}
+
+
+.orbit:nth-of-type(1) .sparkle {
+	--orbit-time:5s;
+}
+
+.orbit:nth-of-type(2) .sparkle {
+	--orbit-time:6s;
+}
+
+@keyframes star {
+	0% {
+		transform:
+			/* als je perspectief wilt voor de orbits	- optie 2	*/
+/* 			perspective(160vw) */
+			rotateZ(0turn)
+			rotateX(90deg)
+			translateZ( calc( var(--orbit-radius) * -1) )
+			rotateY(0turn)
+      /* compenseren voor tilt van orbit */
+			rotateZ( var(--orbit-tilt-y) )
+			rotateX( calc(270deg - var(--orbit-tilt-x)))
+		;
+	}
+	
+	100% {
+		transform:
+			/* als je perspectief wilt voor de orbits	- optie 2	*/
+/* 			perspective(160vw) */
+			rotateZ(1turn)
+			rotateX(90deg)
+			translateZ( calc( var(--orbit-radius) * -1) )
+			rotateY(-1turn)
+			/* compenseren voor tilt van orbit */
+			rotateZ( var(--orbit-tilt-y) )
+			rotateX( calc(270deg - var(--orbit-tilt-x)))
+		;
+	}
 }
 
 }
