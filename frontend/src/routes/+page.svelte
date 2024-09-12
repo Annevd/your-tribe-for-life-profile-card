@@ -308,12 +308,10 @@ div:first-of-type span:last-of-type {
 }
 
 .sparkle {
-    position: relative;
+    position: unset;
     width:var(--width-star);
 
     animation: star linear var(--orbit-time) infinite;
-	
-	clip-path: polygon(50% 0,79% 90%,2% 35%,98% 35%,21% 90%); 
 }
 
 
@@ -322,7 +320,7 @@ div:first-of-type span:last-of-type {
 }
 
 .orbit:nth-of-type(2) .sparkle {
-	--orbit-time:6s;
+	--orbit-time:4s;
 }
 
 @keyframes star {
