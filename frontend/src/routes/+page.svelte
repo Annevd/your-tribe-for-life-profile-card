@@ -2,7 +2,6 @@
     export let data;
 </script>
 
-<body>
     <main>
         <article>
             <h1>
@@ -21,9 +20,9 @@
 
             <ul class="links">
                 <li>
-                    <a href="https://www.instagram.com/xartisticanne?igsh=ZHAweG96MDVjZXc=">
+                    <a href="https://www.instagram.com/xartisticanne?igsh=ZHAweG96MDVjZXc=" aria-label="go to my Instagram">
                         <svg width=45 height=45 viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" fill="#000">
-                            <g id="SVGRepo_iconCarrier"><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round}</style></defs>
+                            <g><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round}</style></defs>
                                 <path class="cls-1" d="M35.38 10.46a2.19 2.19 0 1 0 2.16 2.22v-.06a2.18 2.18 0 0 0-2.16-2.16Z"/>
                                 <path class="cls-1" d="M40.55 5.5H7.45a2 2 0 0 0-1.95 2v33.1a2 2 0 0 0 2 2h33.1a2 2 0 0 0 2-2V7.45a2 2 0 0 0-2.05-1.95Z"/>
                             <path class="cls-1" d="M24 15.72A8.28 8.28 0 1 0 32.28 24h0A8.28 8.28 0 0 0 24 15.72Z"/></g>
@@ -31,9 +30,9 @@
                     </a>
                 </li>
                 <li>
-                    <a href={data.person.custom.codepen}> <!-- Moet custom data worden-->
+                    <a href={data.person.custom.codepen} aria-label="go to my Codepen"> <!-- Moet custom data worden-->
                         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512" xml:space="preserve">
-                            <g id="SVGRepo_iconCarrier">
+                            <g>
                               <path d="M256 1a255 255 0 1 0 0 510 255 255 0 0 0 0-510zm0 469a214 214 0 1 1 0-428 214 214 0 0 1 0 428zm158-264v-2h-1a14 
                               14 0 0 0-1-3 12 12 0 0 0-2-3l-1-1h-1l-144-97c-5-3-11-3-16 0l-144 97h-1l-1 1a12 12 0 0 0-2 3 13 13 0 0 0-1 2v1h-1v104h1v2a16 
                               16 0 0 0 2 3l1 1a12 12 0 0 0 2 1l144 97a14 14 0 0 0 16 0l144-97h1l1-1 1-1v-1l1-1 1-1v-2h1V206zm-144-69 106 71-48 32-58-40v-63zm-28 0v63l-58 40-48-32 
@@ -43,7 +42,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href={data.person.website}>
+                    <a href={data.person.website} aria-label="go to my Github">
                         <svg height="45" width="45" xmlns="http://www.w3.org/2000/svg" viewBox="-143 145 512 512" xml:space="preserve">
                             <path d="M-143 145v512h512V145h-512zm482 482h-452V175h452v452z"/>
                             <path d="M54 509c19 4 39 4 57 5 20-1 39-1 57-4 32-5 56-22 68-53 4-11 7-22 8-34 3-25-1-48-18-68l-2-4c1-20-1-39-8-58-1-3-2-4-5-3l-16 
@@ -77,7 +76,6 @@
 
         </article>
     </main>
-</body>
 
 <style>
 
@@ -262,21 +260,6 @@ div:first-of-type span:last-of-type {
     font-size: 4rem;
 }
 
-/* .sparkle.left {
-    height: 8rem;
-    width: 4rem;
-    bottom: 0%;
-    left: -2.25rem;
-}
-
-.sparkle.right {
-    height: 6rem;
-    width: 3rem;
-    top: 15%;
-    right: -1.5rem;
-} */
-
-
 .orbit {
 	position:absolute;
 	width:var(--orbit-diameter);
@@ -293,8 +276,6 @@ div:first-of-type span:last-of-type {
 	transform-style:preserve-3d;
 	transform:
 		translateY( var(--ty, 0) )
-    /* als je perspectief wilt voor de orbits	- optie 1	*/
-/* 		perspective(160vw) */
 		rotateX( var(--orbit-tilt-x) )
 		rotateY( var(--orbit-tilt-y) )
 		;
@@ -321,14 +302,12 @@ div:first-of-type span:last-of-type {
 }
 
 .orbit.orbit2 .sparkle {
-	--orbit-time:4s;
+	--orbit-time:6s;
 }
 
 @keyframes star {
 	0% {
 		transform:
-			/* als je perspectief wilt voor de orbits	- optie 2	*/
-/* 			perspective(160vw) */
 			rotateZ(0turn)
 			rotateX(90deg)
 			translateZ( calc( var(--orbit-radius) * -1) )
@@ -341,8 +320,6 @@ div:first-of-type span:last-of-type {
 	
 	100% {
 		transform:
-			/* als je perspectief wilt voor de orbits	- optie 2	*/
-/* 			perspective(160vw) */
 			rotateZ(1turn)
 			rotateX(90deg)
 			translateZ( calc( var(--orbit-radius) * -1) )
