@@ -61,14 +61,14 @@
 
             <img class="orbit-icon" src="images/orbit.svg" alt="">
 
-            <div class="orbit">
+            <div class="orbit orbit1">
                 <svg class="sparkle left" width="44" height="86" viewBox="0 0 177 347" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M89 0c0 141 19 179 86 179-73 1-86 46-86 166-1-135-23-165-89-166 79 1 88-54 89-179Z" fill="#000"/>
                     <path d="M89 0c0 142 19 180 88 179-75 0-89 46-88 168 0-137-23-167-89-168 79 1 88-54 89-179Z"/>
                 </svg>
             </div>
 
-            <div class="orbit">
+            <div class="orbit orbit2">
                 <svg class="sparkle right" width="44" height="86" viewBox="0 0 177 347" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M89 0c0 141 19 179 86 179-73 1-86 46-86 166-1-135-23-165-89-166 79 1 88-54 89-179Z" fill="#000"/>
                     <path d="M89 0c0 142 19 180 88 179-75 0-89 46-88 168 0-137-23-167-89-168 79 1 88-54 89-179Z"/>
@@ -233,7 +233,7 @@ p:last-of-type {
     --orbit-whitespace:calc(var(--width-card) * .1);
 	--orbit-diameter:calc( var(--width-card) + var(--orbit-whitespace) * 2 );
 	--orbit-radius:calc( var(--width-card) * .5 + var(--orbit-whitespace) );
-	--orbit-offset-y:calc(var(--width-card) * .5);
+	--orbit-offset-y:calc(var(--width-card) * .25);
 	--orbit-tilt-y:-20deg;
 	--orbit-tilt-x:80deg;
 	
@@ -279,7 +279,6 @@ div:first-of-type span:last-of-type {
 
 .orbit {
 	position:absolute;
-    left: -2.25rem;
 	width:var(--orbit-diameter);
 	aspect-ratio:1/1;
 	border:solid .2em var(--text-color);
@@ -288,6 +287,8 @@ div:first-of-type span:last-of-type {
 	
 	display:grid;
 	place-items:center;
+    justify-self: center;
+    align-self: center;
 	
 	transform-style:preserve-3d;
 	transform:
@@ -299,11 +300,11 @@ div:first-of-type span:last-of-type {
 		;
 }
 
-.orbit:nth-of-type(1) {
+.orbit.orbit1 {
 	--ty:calc(var(--orbit-offset-y) * -1);
 }
 
-.orbit:nth-of-type(2) {
+.orbit.orbit2 {
 	--ty:calc(var(--orbit-offset-y) * 1);
 }
 
@@ -315,11 +316,11 @@ div:first-of-type span:last-of-type {
 }
 
 
-.orbit:nth-of-type(1) .sparkle {
+.orbit.orbit1 .sparkle {
 	--orbit-time:5s;
 }
 
-.orbit:nth-of-type(2) .sparkle {
+.orbit.orbit2 .sparkle {
 	--orbit-time:4s;
 }
 
