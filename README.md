@@ -4,7 +4,7 @@
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
 Redesign je visitekaartje op basis van een headless CMS en een framework.
 
-## Inhoudsopgave
+## 📋 Inhoudsopgave
 
   * [Beschrijving](#beschrijving)
   * [Kenmerken](#kenmerken)
@@ -13,7 +13,7 @@ Redesign je visitekaartje op basis van een headless CMS en een framework.
   * [Bronnen](#bronnen)
   * [Licentie](#licentie)
 
-## Beschrijving
+## 📄 Beschrijving
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 Dit visitekaartje laat zien wie ik ben, wat ik leuk vind en waar ik te vinden ben. Er staat een korte biografie over wat ik doe en overige belangrijke informatie zoals mijn huidige woonplaats, leeftijd, github profiel en codepen profiel. 
 Voor dit visitekaartje wilde ik mezelf kwa design uitdagen, en heb gekozen voor een speelse layout met grid, en een passende animatie rondom het kaartje. Als inspiratie voor dit visitekaartje heb ik Y2K en Cyberpunk genomen en deze gecombineerd tot een geheel. Door de animatie blijft het interessant om naar te kijken.
@@ -24,7 +24,7 @@ Voor dit visitekaartje wilde ik mezelf kwa design uitdagen, en heb gekozen voor 
 <!-- Voeg een link toe naar Github Pages 🌐-->
 [Link naar mijn visitekaartje](https://your-tribe-for-life-profile-card-virid.vercel.app/)
 
-## Kenmerken
+## 📍 Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met Javascript gedaan en hoe? Misschien heb je een framwork of library gebruikt? -->
 Voor dit visitekaartje gebruik ik het framework Sveltekit en haal ik data op uit [Directus](https://fdnd.directus.app/items/person/11).
 
@@ -32,7 +32,7 @@ De HTML is opgedeeld in een `<article>` met daarin een `<h1>`, `<ul>`'s met daar
 
 Ik ben uiteraard mobile first begonnen, en het kaartje is responsive tot aan het kleinste scherm van `320`px. Op kleine mobiele schermen staat de animatie uit, omdat daar geen ruimte er voor is.
 
-## Installatie
+## 📲 Installatie
 
 Volg onderstaande stappen om zelf te werken aan deze code:
 
@@ -44,13 +44,13 @@ Volg onderstaande stappen om zelf te werken aan deze code:
 - [x] Run de command npm run dev
 - [x] Klik op de localhost link en begin met coden!
 
-## Gebruik
+## ✂️ Gebruik
 
 Om deze pagina live te bekijken kan je klikken op de [livelink](https://your-tribe-for-life-profile-card-virid.vercel.app/) in de About sectie van deze repository.
 
 Op dit visitekaartje kan je lezen wie ik ben en waar ik vandaan kom, en kan je klikken op verschillende links om te naar mijn Github, Codepen of Instagram te gaan.
 
-## Bronnen
+## ℹ️ Bronnen
 
 - [SvelteKit @ kit.svelte.dev](https://kit.svelte.dev/)
 - [Svelte getting started @ MDN](https://developer.mozilla.org/en-US/docs/Learn/Tools_and_testing/Client-side_JavaScript_frameworks/Svelte_getting_started)
