@@ -19,7 +19,7 @@ Dit visitekaartje laat zien wie ik ben, wat ik leuk vind en waar ik te vinden be
 Voor dit visitekaartje wilde ik mezelf kwa design uitdagen, en heb gekozen voor een speelse layout met grid, en een passende animatie rondom het kaartje. Als inspiratie voor dit visitekaartje heb ik Y2K en Cyberpunk genomen en deze gecombineerd tot een geheel. Door de animatie blijft het interessant om naar te kijken.
 <!-- Voeg een mooie poster visual toe 📸 -->
 
-![profile-card-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/8dcfcf00-bbcb-4243-9cc3-150120cc2ecc)
+![profile-card-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/3671ccb8-2513-4207-bdde-f18c9820ec50)
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
 [Link naar mijn visitekaartje](https://your-tribe-for-life-profile-card-virid.vercel.app/)
