@@ -30,7 +30,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href={data.person.custom.codepen} aria-label="go to my Codepen"> <!-- Moet custom data worden-->
+                    <a href={data.person.custom.codepen} aria-label="go to my Codepen">
                         <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 512 512" xml:space="preserve">
                             <g>
                               <path d="M256 1a255 255 0 1 0 0 510 255 255 0 0 0 0-510zm0 469a214 214 0 1 1 0-428 214 214 0 0 1 0 428zm158-264v-2h-1a14 
@@ -54,7 +54,10 @@
                 </li>
             </ul>
 
-            <img class="selfie" height=300 src="images/foto-self-1.PNG" alt="selfie">
+            <picture>
+                <source srcset="images/foto-self-1.webp" type="image/webp">
+                <img class="selfie" src="images/foto-self-1.PNG" height=300 alt="selfie">
+            </picture>
 
             <p>&copy; 14 february 2003</p>
 
@@ -187,10 +190,11 @@ div:first-of-type span:last-of-type {
     scale: 2;
 }
 
-.selfie {
+picture {
     grid-column: 2/4;
     grid-row: 3/7;
     justify-self: center;
+    height: 18.75rem;
     z-index: 100;
 }
 
