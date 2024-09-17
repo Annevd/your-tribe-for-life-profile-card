@@ -92,7 +92,6 @@ article {
     max-width: 18rem;
     grid-gap: 1rem;
     padding: 1rem 1rem 0 1rem;
-    /* overflow: hidden; */
 }
 
 h1 {
@@ -121,6 +120,7 @@ h1 span {
 .links svg {
     height: 35px;
     width: 35px;
+    transition: .1s ease-in-out;
 }
 
 .links li:first-of-type svg {
@@ -131,6 +131,7 @@ h1 span {
 .links li:first-of-type svg .cls-1 {
     stroke: var(--accent-color-2);
     stroke-width: 2px;
+    transition: .1s ease-in-out;
 }
 
 .links li:nth-of-type(2) svg {
@@ -152,7 +153,6 @@ h1 span {
 .info {
     grid-column: 1/3;
     grid-row: 5;
-    /* justify-self: center; */
 }
 
 .info li {
@@ -171,11 +171,13 @@ div:first-of-type {
     font-family: 'Sofachrome', sans-serif;
     transform: scaleY(1.5);
     line-height: 1;
+    color: var(--accent-color-1);
 }
 
 div:first-of-type span:last-of-type {
     font-size: 3.25rem;
     transform: scaleY(1.25);
+    color: var(--accent-color-2);
 }
 
 @supports (-webkit-text-stroke: 1px black) {
@@ -186,6 +188,7 @@ div:first-of-type span:last-of-type {
 
   div:first-of-type span:last-of-type {
     -webkit-text-stroke: 0.5px var(--accent-color-2);
+    -webkit-text-fill-color: transparent;
   }
 }
 
@@ -234,6 +237,15 @@ p:last-of-type {
     right: -0.75rem;
 }
 
+.links li svg:hover {
+    fill: var(--text-color);
+    stroke: var(--text-color);
+}
+
+.links li svg:hover .cls-1 {
+    stroke: var(--text-color);
+}
+
 @media (width > 25rem) {
     article {
     max-width: 22rem;
@@ -249,7 +261,6 @@ p:last-of-type {
 	
 	--width-star:calc(var(--width-card) * .25);
     width:var(--width-card);
-	/* aspect-ratio:3/5; */
 	
     --width-star:calc(var(--width-card) * .25);
 	
