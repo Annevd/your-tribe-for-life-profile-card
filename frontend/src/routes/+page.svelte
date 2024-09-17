@@ -87,11 +87,12 @@ article {
     display: grid;
     grid-template-columns: repeat(3, auto) ;
     grid-template-rows: repeat(6, auto) ;
-    background-color: var(--background-card);
     height: auto;
     max-width: 18rem;
     grid-gap: 1rem;
     padding: 1rem 1rem 0 1rem;
+    background-color: var(--background-card);
+    box-shadow: #0000005c 2px 2px 20px;
 }
 
 h1 {
