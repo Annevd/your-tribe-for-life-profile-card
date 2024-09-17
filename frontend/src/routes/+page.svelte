@@ -123,8 +123,14 @@ h1 span {
     width: 35px;
 }
 
+.links li:first-of-type svg {
+    height: 40px;
+    width: 40px;
+}
+
 .links li:first-of-type svg .cls-1 {
     stroke: var(--accent-color-2);
+    stroke-width: 2px;
 }
 
 .links li:nth-of-type(2) svg {
@@ -133,12 +139,14 @@ h1 span {
 
 .links li:last-of-type svg {
     fill: var(--accent-color-1);
+    margin-left: 5px;
 }
 
 .bio {
     grid-column: 2/4;
     grid-row: 2;
     max-width: 12rem;
+    line-height: 1.2;
 }
 
 .info {
