@@ -6,11 +6,11 @@ Redesign je visitekaartje op basis van een headless CMS en een framework.
 
 ## 📋 Inhoudsopgave
 
-  * [Beschrijving](#beschrijving)
-  * [Kenmerken](#kenmerken)
-  * [Installatie](#installatie)
-  * [Gebruik](#gebruik)
-  * [Bronnen](#bronnen)
+  * [Beschrijving](https://github.com/Annevd/your-tribe-for-life-profile-card/blob/main/README.md#-beschrijving)
+  * [Kenmerken](https://github.com/Annevd/your-tribe-for-life-profile-card/blob/main/README.md#-kenmerken)
+  * [Installatie](https://github.com/Annevd/your-tribe-for-life-profile-card/blob/main/README.md#-installatie)
+  * [Gebruik](https://github.com/Annevd/your-tribe-for-life-profile-card/blob/main/README.md#%EF%B8%8F-gebruik)
+  * [Bronnen](https://github.com/Annevd/your-tribe-for-life-profile-card/blob/main/README.md#%E2%84%B9%EF%B8%8F-bronnen)
   * [Licentie](#licentie)
 
 ## 📄 Beschrijving
