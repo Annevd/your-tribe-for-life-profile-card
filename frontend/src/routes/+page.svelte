@@ -205,7 +205,7 @@ div:first-of-type span:last-of-type {
 }
 
 .orbit-icon path {
-    fill: var(--accent-color-3);
+    fill: var(--text-color);
 }
 
 picture {
