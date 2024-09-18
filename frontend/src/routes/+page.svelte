@@ -224,6 +224,17 @@ p:last-of-type {
     position: absolute;
     fill: var(--text-color);
     stroke: var(--text-color);
+    animation: sparkle 0.4s infinite;
+}
+
+@keyframes sparkle {
+    25% {
+        transform: rotate(3deg);
+    }
+
+    75% {
+        transform: rotate(-3deg);
+    }
 }
 
 .sparkle.left {
