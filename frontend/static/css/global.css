@@ -23,19 +23,23 @@
 }
 
 :root {
+    --page-background-color: #fff;
     --background-card: #F4EFEA;
     --accent-color-1: #C27329;
     --accent-color-2: #408CC4;
     --accent-color-3: #B478A1;
     --text-color: #4D382C;
+    --star-color: #4D382C;
 }
-/* 
-:root {
-    --background-card: #2D3250;
-    --accent-color-1: #7B5CFA;
-    --accent-color-2: #FF7231;
-    --accent-color-3: #A7B5FE;
-    --text-color: #fff;
+
+/* :root {
+    --page-background-color: #0C1422;
+    --background-card: #1F2639;
+    --accent-color-1: #CC3E86;
+    --accent-color-2: #ffe189;
+    --accent-color-3: #747ec2;
+    --text-color: #A2DFCE;
+    --star-color: #ffe189;
 } */
 
 * {
@@ -49,6 +53,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    background: var(--page-background-color);
 }
 
 body::before {

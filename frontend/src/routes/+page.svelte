@@ -61,7 +61,9 @@
 
             <p>&copy; 14 february 2003</p>
 
-            <img class="orbit-icon" src="images/orbit.svg" alt="">
+            <svg class="orbit-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" version="1.0" viewBox="0 0 131 131">
+                <path fill="#4D382C" d="M41 36c-48 6-42 33 8 36 9 1 6 0-6-2-35-5-26-25 12-28h10v5c-1 5-3 11-6 15-1 1-4 2-12 2l-12 1h12c14 0 16 2 18 16v6h-3l-8-2c-10-1-21-5-23-9-2-3-3-2-2 1 7 19 72 22 90 5 12-11-6-24-36-26h-9l9 2c39 6 34 25-8 29h-9v-5c2-15 4-16 18-17l11-1H84c-9 0-10 0-12-2-4-5-8-20-5-20 11 0 29 6 33 11l2 2v-2c0-11-34-21-61-17z"/>
+            </svg>
 
             <div class="orbit orbit1">
                 <svg class="sparkle left" width="44" height="86" viewBox="0 0 177 347" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -183,7 +185,7 @@ div:first-of-type span:last-of-type {
 
 @supports (-webkit-text-stroke: 1px black) {
   div:first-of-type {
-    -webkit-text-stroke: 0.5px var(--accent-color-1);
+    -webkit-text-stroke: 0.75px var(--accent-color-1);
     -webkit-text-fill-color: transparent;
   }
 
@@ -200,6 +202,10 @@ div:first-of-type span:last-of-type {
     align-self: center;
     justify-self: center;
     scale: 2;
+}
+
+.orbit-icon path {
+    fill: var(--accent-color-3);
 }
 
 picture {
@@ -222,8 +228,8 @@ p:last-of-type {
 
 .sparkle {
     position: absolute;
-    fill: var(--text-color);
-    stroke: var(--text-color);
+    fill: var(--star-color);
+    stroke: var(--star-color);
     animation: sparkle 0.4s infinite;
 }
 
@@ -299,7 +305,7 @@ div:first-of-type span:last-of-type {
 	position:absolute;
 	width:var(--orbit-diameter);
 	aspect-ratio:1/1;
-	border:solid .2em var(--text-color);
+	border:solid .2em var(--star-color);
 	border-radius:50%;
     margin: 0;
 	
