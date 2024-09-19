@@ -105,7 +105,7 @@
             </svg>
         </button>
 
-        <button class="light-mode-button hidden"  on:click={disableDarkMode} aria-label="enable light mode">
+        <button class="light-mode-button hidden" on:click={disableDarkMode} aria-label="enable light mode">
             <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 32 32">
                 <path d="M23 14c3-1 3-6 6-6-4-3-4 3-9 1 1-3-2-6 0-8-5 1-1 5-6 8-1-3-6-3-5-6-3 4 3 4 1 9-3-1-7 2-8 0 1 5 5 1 7 6-3 1-3 6-6 5 4 3 4-3 9-1-1 3 2 6 0 8 5-1 1-5 6-7 1 3 6 3 6 6 2-4-3-4-2-9 4 1 7-3 9 0-1-5-5-1-8-6z"/>
             </svg>
