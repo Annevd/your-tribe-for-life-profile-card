@@ -17,9 +17,14 @@ Redesign je visitekaartje op basis van een headless CMS en een framework.
 <!-- In de Beschrijving staat hoe je project er uit ziet, hoe het werkt en wat je er mee kan. -->
 Dit visitekaartje laat zien wie ik ben, wat ik leuk vind en waar ik te vinden ben. Er staat een korte biografie over wat ik doe en overige belangrijke informatie zoals mijn huidige woonplaats, leeftijd, github profiel en codepen profiel. 
 Voor dit visitekaartje wilde ik mezelf kwa design uitdagen, en heb gekozen voor een speelse layout met grid, en een passende animatie rondom het kaartje. Als inspiratie voor dit visitekaartje heb ik Y2K en Cyberpunk genomen en deze gecombineerd tot een geheel. Door de animatie blijft het interessant om naar te kijken.
+Er is tot slot ook een dark mode, deze kun je aanzetten door op het maantje links onder in het kaartje te klikken.
 <!-- Voeg een mooie poster visual toe 📸 -->
+### Light mode
+![profile-card-2-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/ed59da13-ada8-4739-9e38-29703db2a2c2)
 
-![profile-card-ezgif com-video-to-gif-converter (1)](https://github.com/user-attachments/assets/3671ccb8-2513-4207-bdde-f18c9820ec50)
+### Dark mode
+![profile-card-dark-ezgif com-video-to-gif-converter](https://github.com/user-attachments/assets/28e7e44a-6318-4b1c-83be-d85823486777)
+
 
 <!-- Voeg een link toe naar Github Pages 🌐-->
 [Link naar mijn visitekaartje](https://your-tribe-for-life-profile-card-virid.vercel.app/)
@@ -29,8 +34,9 @@ Voor dit visitekaartje wilde ik mezelf kwa design uitdagen, en heb gekozen voor 
 Voor dit visitekaartje gebruik ik het framework Sveltekit en haal ik data op uit [Directus](https://fdnd.directus.app/items/person/11).
 
 De HTML is opgedeeld in een `<article>` met daarin een `<h1>`, `<ul>`'s met daarin `<li>`'s, `<p>`'s en waar nodig een paar `<div>`'s en `<span>`'s voor CSS styling. Met CSS `keyframes` heb ik mijn zelfgemaakte ster svg's laten animeren over een orbit om mijn visitekaartje heen. Elke ster heeft een andere animatie snelheid zodat ze niet tegelijkertijd animeren.
+Met Javascript toggle ik dark mode en het wel/niet laten zien van de juiste icoontjes.
 
-Ik ben uiteraard mobile first begonnen, en het kaartje is responsive tot aan het kleinste scherm van `320`px. Op kleine mobiele schermen staat de animatie uit, omdat daar geen ruimte er voor is.
+Ik ben mobile first begonnen, en het kaartje is responsive vanaf het kleinste scherm van `320`px. Op kleine mobiele schermen staat de animatie uit, omdat daar geen ruimte er voor is.
 
 ## 📲 Installatie
 
