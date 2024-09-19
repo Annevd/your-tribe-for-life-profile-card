@@ -46,9 +46,8 @@
             <li>
                 <a href="https://www.instagram.com/xartisticanne?igsh=ZHAweG96MDVjZXc=" aria-label="go to my Instagram">
                     <svg width=45 height=45 viewBox="0 0 48 48" id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" fill="#000">
-                        <g><defs><style>.cls-1{fill:none;stroke:#000;stroke-linecap:round;stroke-linejoin:round}</style></defs>
-                            <path class="cls-1" d="M35.38 10.46a2.19 2.19 0 1 0 2.16 2.22v-.06a2.18 2.18 0 0 0-2.16-2.16Z"/>
-                            <path class="cls-1" d="M40.55 5.5H7.45a2 2 0 0 0-1.95 2v33.1a2 2 0 0 0 2 2h33.1a2 2 0 0 0 2-2V7.45a2 2 0 0 0-2.05-1.95Z"/>
+                        <g><path class="cls-1" d="M35.38 10.46a2.19 2.19 0 1 0 2.16 2.22v-.06a2.18 2.18 0 0 0-2.16-2.16Z"/>
+                        <path class="cls-1" d="M40.55 5.5H7.45a2 2 0 0 0-1.95 2v33.1a2 2 0 0 0 2 2h33.1a2 2 0 0 0 2-2V7.45a2 2 0 0 0-2.05-1.95Z"/>
                         <path class="cls-1" d="M24 15.72A8.28 8.28 0 1 0 32.28 24h0A8.28 8.28 0 0 0 24 15.72Z"/></g>
                     </svg>
                 </a>
@@ -86,7 +85,7 @@
 
         <p>&copy; 14 february 2003</p>
 
-        <svg class="orbit-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" version="1.0" viewBox="0 0 131 131">
+        <svg class="orbit-icon" xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 131 131">
             <path fill="#4D382C" d="M41 36c-48 6-42 33 8 36 9 1 6 0-6-2-35-5-26-25 12-28h10v5c-1 5-3 11-6 15-1 1-4 2-12 2l-12 1h12c14 0 16 2 18 16v6h-3l-8-2c-10-1-21-5-23-9-2-3-3-2-2 1 7 19 72 22 90 5 12-11-6-24-36-26h-9l9 2c39 6 34 25-8 29h-9v-5c2-15 4-16 18-17l11-1H84c-9 0-10 0-12-2-4-5-8-20-5-20 11 0 29 6 33 11l2 2v-2c0-11-34-21-61-17z"/>
         </svg>
 
@@ -173,6 +172,7 @@ h1 {
 }
 
 .links li:first-of-type svg .cls-1 {
+    fill: none;
     stroke: var(--accent-color-2);
     stroke-width: 2px;
     transition: .1s ease-in-out;
@@ -316,7 +316,7 @@ p:last-of-type {
 .dark-mode-button {
     grid-column: 1;
     grid-row: 6;
-    rotate: 25deg;
+    transform: rotate(25deg);
 }
 
 .dark-mode-button svg {
@@ -356,11 +356,11 @@ p:last-of-type {
 }
 
 .dark-mode-button svg:hover {
-    rotate: -25deg;
+    transform: rotate(-25deg);
 }
 
 .light-mode-button svg:hover {
-    rotate: 180deg;
+    transform: rotate(180deg);
 }
 
 /* ----- Media queries ----- */
