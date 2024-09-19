@@ -1,5 +1,25 @@
 <script>
     export let data;
+
+    import { onMount } from 'svelte';
+
+    // Ensure light mode button is hidden initially
+    onMount(() => {
+        document.querySelector('.light-mode-button').classList.add('hidden');
+    });
+
+    function enableDarkMode() {
+        document.body.classList.add('dark-mode')
+        document.querySelector('.dark-mode-button').classList.add('hidden');
+        document.querySelector('.light-mode-button').classList.remove('hidden');
+    }
+
+    function disableDarkMode() {
+        document.body.classList.remove('dark-mode')
+        document.querySelector('.light-mode-button').classList.add('hidden');
+        document.querySelector('.dark-mode-button').classList.remove('hidden');
+    }
+
 </script>
 
 <main>
@@ -84,6 +104,20 @@
                 <path d="M89 0c0 142 19 180 88 179-75 0-89 46-88 168 0-137-23-167-89-168 79 1 88-54 89-179Z"/>
             </svg>
         </div>
+
+        <!-- Dark mode button -->
+
+        <button class="dark-mode-button" on:click={enableDarkMode}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 30 30">
+                <path d="M10 4a12 12 0 0 0-7 11 12 12 0 0 0 12 12 12 12 0 0 0 11-7 12 12 0 0 1-5 1A12 12 0 0 1 9 9a12 12 0 0 1 1-5Z"/>
+            </svg>
+        </button>
+
+        <button class="light-mode-button hidden"  on:click={disableDarkMode}>
+            <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" viewBox="0 0 32 32">
+                <path d="M23 14c3-1 3-6 6-6-4-3-4 3-9 1 1-3-2-6 0-8-5 1-1 5-6 8-1-3-6-3-5-6-3 4 3 4 1 9-3-1-7 2-8 0 1 5 5 1 7 6-3 1-3 6-6 5 4 3 4-3 9-1-1 3 2 6 0 8 5-1 1-5 6-7 1 3 6 3 6 6 2-4-3-4-2-9 4 1 7-3 9 0-1-5-5-1-8-6z"/>
+            </svg>
+        </button>
 
     </article>
 
@@ -244,6 +278,7 @@ p:last-of-type {
 }
 
 /* Stars/animation mobile */
+
 .sparkle {
     fill: var(--star-color);
     stroke: var(--star-color);
@@ -266,7 +301,7 @@ p:last-of-type {
 
 .orbit1 {
     height: 6rem;
-    bottom: 1%;
+    bottom: 6%;
     left: -1.25rem;
 }
 
@@ -276,9 +311,37 @@ p:last-of-type {
     right: -0.75rem;
 }
 
+/* Dark/light mode buttons */
+
 .dark-mode-button {
     grid-column: 1;
     grid-row: 6;
+    rotate: 25deg;
+}
+
+.dark-mode-button svg {
+    transition: 0.3s ease-in-out;
+}
+
+.dark-mode-button svg path {
+    fill: var(--text-color);
+}
+
+.light-mode-button {
+    grid-column: 1;
+    grid-row: 6;
+}
+
+.light-mode-button svg {
+    transition: 1s ease-in-out;
+}
+
+.light-mode-button svg path {
+    fill: var(--accent-color-2);
+}
+
+.hidden {
+    display: none;
 }
 
 /* ----- Hovers ----- */
@@ -290,6 +353,14 @@ p:last-of-type {
 
 .links li svg:hover .cls-1 {
     stroke: var(--text-color);
+}
+
+.dark-mode-button svg:hover {
+    rotate: -25deg;
+}
+
+.light-mode-button svg:hover {
+    rotate: 180deg;
 }
 
 /* ----- Media queries ----- */
@@ -373,6 +444,8 @@ p:last-of-type {
     .orbit.orbit2 .sparkle {
         --orbit-time: 6s;
     }
+
+    /* Stars animation desktop */
 
     @keyframes star {
         0% {
