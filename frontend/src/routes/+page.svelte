@@ -3,6 +3,7 @@
 </script>
 
 <main>
+
     <!-- card -->
     <article>
 
@@ -243,11 +244,13 @@ p:last-of-type {
 }
 
 /* Stars/animation mobile */
-
 .sparkle {
-    position: absolute;
     fill: var(--star-color);
     stroke: var(--star-color);
+}
+
+.orbit {
+    position: absolute;
     animation: sparkle 0.4s infinite;
 }
 
@@ -261,16 +264,21 @@ p:last-of-type {
     }
 }
 
-.sparkle.left {
+.orbit1 {
     height: 6rem;
     bottom: 1%;
     left: -1.25rem;
 }
 
-.sparkle.right {
+.orbit2 {
     height: 5rem;
     top: 20%;
     right: -0.75rem;
+}
+
+.dark-mode-button {
+    grid-column: 1;
+    grid-row: 6;
 }
 
 /* ----- Hovers ----- */
@@ -330,6 +338,8 @@ p:last-of-type {
         aspect-ratio: 1/1;
         border: solid .2em var(--star-color);
         border-radius: 50%;
+        animation: none;
+        height: unset;
         
         transform-style: preserve-3d;
         transform:
@@ -339,10 +349,14 @@ p:last-of-type {
     }
 
     .orbit.orbit1 {
+        bottom: unset;
+        left: unset;
         --ty: calc(var(--orbit-offset-y) * -1);
     }
 
     .orbit.orbit2 {
+        top: unset;
+        right: unset;
         --ty: calc(var(--orbit-offset-y) * 1);
     }
 
