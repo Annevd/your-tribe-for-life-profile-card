@@ -22,7 +22,7 @@
     font-display: swap;
 }
 
-:root {
+body {
     --page-background-color: #fff;
     --background-card: #F4EFEA;
     --accent-color-1: #C27329;
@@ -32,7 +32,7 @@
     --star-color: #4D382C;
 }
 
-/* :root {
+body.dark-mode {
     --page-background-color: #0C1422;
     --background-card: #1F2639;
     --accent-color-1: #CC3E86;
@@ -40,7 +40,7 @@
     --accent-color-3: #747ec2;
     --text-color: #A2DFCE;
     --star-color: #ffe189;
-} */
+}
 
 * {
     box-sizing: border-box;
