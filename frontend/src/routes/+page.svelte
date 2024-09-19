@@ -1,13 +1,6 @@
 <script>
     export let data;
 
-    import { onMount } from 'svelte';
-
-    // Ensure light mode button is hidden initially
-    onMount(() => {
-        document.querySelector('.light-mode-button').classList.add('hidden');
-    });
-
     function enableDarkMode() {
         document.body.classList.add('dark-mode')
         document.querySelector('.dark-mode-button').classList.add('hidden');
