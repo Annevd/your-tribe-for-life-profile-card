@@ -1,16 +1,32 @@
 <script>
     export let data;
 
+    import { onMount } from 'svelte';
+
+    let article;
+
+    onMount(() => {
+        article = document.querySelector('article');
+    })
+
     function enableDarkMode() {
         document.body.classList.add('dark-mode')
         document.querySelector('.dark-mode-button').classList.add('hidden');
         document.querySelector('.light-mode-button').classList.remove('hidden');
+        article.classList.add('spin');
+        article.addEventListener('animationend', () => {
+            article.classList.remove('spin');
+        }, { once: true });
     }
 
     function disableDarkMode() {
         document.body.classList.remove('dark-mode')
         document.querySelector('.light-mode-button').classList.add('hidden');
         document.querySelector('.dark-mode-button').classList.remove('hidden');
+        article.classList.add('spin');
+        article.addEventListener('animationend', () => {
+            article.classList.remove('spin');
+        }, { once: true });
     }
 
 </script>
@@ -130,6 +146,7 @@ article {
     padding: 1rem 1rem 0 1rem;
     background-color: var(--background-card);
     box-shadow: #0000005c 2px 2px 20px;
+    transition: 0.3s;
 }
 
 h1 {

@@ -97,3 +97,16 @@ button {
     appearance: none;
     background: none;
 }
+
+.spin {
+    animation: spin 1s ease-in-out;
+}
+
+@keyframes spin {
+    0% {
+        transform: perspective(100rem) rotateY(0deg);
+    }
+    100% {
+        transform: perspective(100rem) rotateY(360deg);
+    }
+}
