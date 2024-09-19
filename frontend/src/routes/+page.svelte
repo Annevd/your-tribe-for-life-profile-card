@@ -1,4 +1,5 @@
 <script>
+
     export let data;
 
     import { onMount } from 'svelte';
@@ -34,6 +35,7 @@
 <main>
 
     <!-- card -->
+     
     <article>
 
         <h1>
@@ -51,6 +53,7 @@
         </ul>
 
         <!-- social links -->
+
         <ul class="links">
             <li>
                 <a href="https://www.instagram.com/xartisticanne?igsh=ZHAweG96MDVjZXc=" aria-label="go to my Instagram">
@@ -87,6 +90,7 @@
         </ul>
 
         <!-- Picture self -->
+
         <picture>
             <source srcset="images/foto-self-1.webp" type="image/webp">
             <img class="selfie" src="images/foto-self-1.PNG" height=300 alt="selfie">
@@ -99,6 +103,7 @@
         </svg>
 
         <!-- Orbit stars -->
+
         <div class="orbit orbit1">
             <svg class="sparkle left" width="44" height="86" viewBox="0 0 177 347" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M89 0c0 141 19 179 86 179-73 1-86 46-86 166-1-135-23-165-89-166 79 1 88-54 89-179Z" fill="#000"/>
