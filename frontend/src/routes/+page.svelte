@@ -39,8 +39,8 @@
     <article>
 
         <h1>
-            {data.person.name}
-            <span>{data.person.prefix} {data.person.surname}</span>
+            Anne
+            <span>van Dijk</span>
         </h1>
 
         <p class="bio">{data.person.bio}</p>
